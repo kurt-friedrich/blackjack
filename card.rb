@@ -1,5 +1,6 @@
-#code refactored based on examples from 3/10 lecture
+# code refactored based on examples from 3/10 lecture
 
+# Makes 52 card deck with Blackjack values
 class Card
   attr_accessor :face, :suit, :value
 
@@ -37,5 +38,4 @@ class Card
   def >(card)
     self.value > card.value
   end
-
 end
