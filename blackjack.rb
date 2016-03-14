@@ -137,12 +137,16 @@ class Game
 
   def hit?
     first_score
-    puts "Do you want to [hit] or [stand]?"
-    answer = gets.chomp.downcase
-    if answer == 'hit'
-      hit
-    elsif answer == 'stand'
+    if pscore == 21
       self.stand = true
+    else
+      puts "Do you want to [hit] or [stand]?"
+      answer = gets.chomp.downcase
+      if answer == 'hit'
+        hit
+      elsif answer == 'stand'
+        self.stand = true
+      end
     end
   end
 
