@@ -21,7 +21,7 @@ class Game
   end
 
   def player_turn
-    if pscore == 21
+    if pscore == 21 || pscore == 22
       blackjack
     else
       while self.stand == false
@@ -38,7 +38,7 @@ class Game
   def dealer_turn
     dealer_flip
     display_score
-    if dscore == 21
+    if dscore == 21 || dscore == 22
       dblackjack
     else
       while dscore <= 21
